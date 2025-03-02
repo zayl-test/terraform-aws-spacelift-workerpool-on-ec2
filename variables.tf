@@ -6,6 +6,7 @@ variable "ami_id" {
 
 variable "configuration" {
   type        = string
+  default     = ""
   description = <<EOF
   User configuration. This allows you to decide how you want to pass your token
   and private key to the environment - be that directly, or using SSM Parameter
@@ -86,6 +87,8 @@ variable "poweroff_delay" {
 variable "security_groups" {
   type        = list(string)
   description = "List of security groups to use"
+  default     = ""
+
 }
 
 variable "additional_tags" {
@@ -118,6 +121,7 @@ variable "volume_size" {
 variable "vpc_subnets" {
   type        = list(string)
   description = "List of VPC subnets to use"
+  default     = ""
 }
 
 variable "worker_pool_id" {

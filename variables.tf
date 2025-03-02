@@ -1,12 +1,12 @@
 variable "ami_id" {
   type        = string
   description = "ID of the Spacelift AMI. If left empty, the latest Spacelift AMI will be used."
-  default     = ""
+  default     = "test"
 }
 
 variable "configuration" {
   type        = string
-  default     = ""
+  default     = "test"
   description = <<EOF
   User configuration. This allows you to decide how you want to pass your token
   and private key to the environment - be that directly, or using SSM Parameter
@@ -57,7 +57,7 @@ variable "enabled_metrics" {
 variable "custom_iam_role_name" {
   description = "Name of an existing IAM to use. Used `when create_iam_role` = `false`"
   type        = string
-  default     = ""
+  default     = "test"
 }
 
 variable "create_iam_role" {
@@ -87,7 +87,7 @@ variable "poweroff_delay" {
 variable "security_groups" {
   type        = list(string)
   description = "List of security groups to use"
-  default     = ""
+  default     = "["test"]"
 
 }
 
@@ -121,7 +121,7 @@ variable "volume_size" {
 variable "vpc_subnets" {
   type        = list(string)
   description = "List of VPC subnets to use"
-  default     = ""
+  default     = "["test"]"
 }
 
 variable "worker_pool_id" {

@@ -131,6 +131,7 @@ variable "worker_pool_id" {
     condition     = can(regex("^[0-9A-HJKMNP-TV-Z]+$", var.worker_pool_id))
     error_message = "The worker pool ID must be a valid ULID (eg 01HCC6QZ932J7WDF4FTVM9QMEP)."
   }
+  default     = "test"
 }
 
 variable "base_name" {

@@ -87,7 +87,7 @@ variable "poweroff_delay" {
 variable "security_groups" {
   type        = list(string)
   description = "List of security groups to use"
-  default     = "["test"]"
+  default     = ["test"]
 
 }
 
@@ -121,7 +121,7 @@ variable "volume_size" {
 variable "vpc_subnets" {
   type        = list(string)
   description = "List of VPC subnets to use"
-  default     = "["test"]"
+  default     = ["test"]
 }
 
 variable "worker_pool_id" {
